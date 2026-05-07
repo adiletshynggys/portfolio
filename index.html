@@ -2,55 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Adilet Shynggys | Prospective PhD Student</title>
+  <title>Adilet Shynggys | Academic Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
+    :root {
+      --accent: #1d3557;
+      --light-bg: #f4f6f8;
+      --text: #1a1a1a;
+      --muted: #555;
+    }
+
     body {
-      font-family: "Georgia", "Times New Roman", serif;
-      background: #ffffff;
-      color: #111;
-      line-height: 1.6;
       margin: 0;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background: var(--light-bg);
+      color: var(--text);
+      line-height: 1.65;
     }
 
     .container {
       max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 24px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 48px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border-radius: 6px;
     }
 
     header {
       text-align: center;
+      margin-bottom: 40px;
     }
 
     header h1 {
-      font-size: 32px;
+      font-size: 34px;
       margin-bottom: 6px;
+      color: var(--accent);
     }
 
-    header p {
-      margin: 4px 0;
-      font-size: 16px;
+    header .subtitle {
+      font-weight: 600;
+      margin-top: 10px;
     }
 
-    .contact {
+    header .contact {
       font-size: 14px;
-      margin-top: 6px;
+      color: var(--muted);
+      margin-top: 8px;
     }
 
-    .contact a {
-      color: #003366;
+    header a {
+      color: var(--accent);
       text-decoration: none;
     }
 
-    .contact a:hover {
+    header a:hover {
       text-decoration: underline;
-    }
-
-    .subtitle {
-      margin-top: 16px;
-      font-weight: bold;
     }
 
     section {
@@ -59,25 +67,27 @@
 
     section h2 {
       font-size: 22px;
+      color: var(--accent);
       margin-bottom: 6px;
     }
 
-    hr {
+    section hr {
       border: none;
-      border-top: 1px solid #aaa;
-      margin: 8px 0 16px 0;
+      border-top: 1px solid #ddd;
+      margin: 8px 0 20px 0;
     }
 
     .entry {
-      margin-bottom: 16px;
+      margin-bottom: 22px;
     }
 
     .entry-title {
-      font-weight: bold;
+      font-weight: 600;
     }
 
     .entry-meta {
       float: right;
+      color: var(--muted);
       font-size: 14px;
     }
 
@@ -87,9 +97,9 @@
 
     footer {
       margin-top: 50px;
-      font-size: 13px;
       text-align: center;
-      color: #555;
+      font-size: 13px;
+      color: #777;
     }
   </style>
 </head>
@@ -100,18 +110,24 @@
     <!-- HEADER -->
     <header>
       <h1>Adilet Shynggys</h1>
-      <p>Prospective PhD Student — Mechanical Engineering</p>
+      <p class="subtitle">
+        Prospective PhD Student — Mechanical Engineering
+      </p>
       <p class="subtitle">
         Energy Systems · Power Plant Design · Nuclear & Sustainable Energy
       </p>
       <div class="contact">
         Astana, Kazakhstan ·
-        <a href="mailto:shyngysadilet81@gmail.com">shyngysadilet81@gmail.com</a> ·
-        <a href="https://www.linkedin.com/in/adilet-shynggys-229224251/" target="_blank">LinkedIn</a>
+        <a href="mailto:shyngysadilet81@gmail.com">
+          shyngysadilet81@gmail.com
+        </a> ·
+        <a href="https://www.linkedin.com/in/adilet-shynggys-229224251/" target="_blank">
+          LinkedIn
+        </a>
       </div>
     </header>
 
-    <!-- ABOUT / RESEARCH PROFILE -->
+    <!-- RESEARCH PROFILE -->
     <section>
       <h2>Research Profile</h2>
       <hr>
@@ -145,4 +161,68 @@
 
       <div class="entry">
         <span class="entry-title">Research Assistant — Nazarbayev University</span>
+        <span class="entry-meta">2025</span>
+        <div class="clear"></div>
+        Conducted experimental and analytical research on triboelectric nanogenerators (TENGs),
+        optimizing device performance using process-engineering principles and improving energy
+        harvesting efficiency by 15–20%. Presented results at international conferences and received
+        the Best Research Poster Presentation award.
+      </div>
 
+      <div class="entry">
+        <span class="entry-title">Power and Energy Systems Research (Planned)</span>
+        <div class="clear"></div>
+        Planned research on nuclear power plant design under Prof. Amgad Salama, focusing on
+        thermal–hydraulic analysis and sustainable power generation.
+      </div>
+
+      <div class="entry">
+        <span class="entry-title">Engineering Design Collaboration — UC Berkeley</span>
+        <div class="clear"></div>
+        Ongoing interdisciplinary collaboration with Prof. Kazerooni on mechanical system design.
+      </div>
+    </section>
+
+    <!-- INDUSTRY -->
+    <section>
+      <h2>Industry Experience</h2>
+      <hr>
+
+      <div class="entry">
+        <span class="entry-title">Product Support Engineering Intern — Wabtec Corporation</span>
+        <span class="entry-meta">Summer 2025</span>
+        <div class="clear"></div>
+        Applied process-engineering methodologies to optimize manufacturing workflows, contributing
+        to a 10% reduction in material waste. Supported Initial Quality Studies and conducted thermal
+        testing of electric motors during site visits.
+      </div>
+    </section>
+
+    <!-- HONORS -->
+    <section>
+      <h2>Honors & Awards</h2>
+      <hr>
+      Winner, Mechaton Engineering Case Competition (2025)<br>
+      Presidential Stipend, Nazarbayev University<br>
+      Yessenov Foundation Scholarship<br>
+      Mereke Foundation Scholarship<br>
+      Dean’s List (four semesters)
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <h2>Technical Skills</h2>
+      <hr>
+      Engineering & Manufacturing: 3D printing, electrospinning, micro-printing, silicon printing<br>
+      Computation: MATLAB, Python, SolidWorks, OriginPro, Wolfram<br>
+      Languages: English, Russian, Kazakh
+    </section>
+
+    <footer>
+      © 2026 Adilet Shynggys · Academic Portfolio
+    </footer>
+
+  </div>
+</body>
+</html>
+``
