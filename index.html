@@ -8,7 +8,7 @@
   <style>
     :root {
       --accent: #1d3557;
-      --light-bg: #f4f6f8;
+      --bg: #f4f6f8;
       --text: #1a1a1a;
       --muted: #555;
     }
@@ -16,9 +16,37 @@
     body {
       margin: 0;
       font-family: "Inter", "Segoe UI", Arial, sans-serif;
-      background: var(--light-bg);
+      background: var(--bg);
       color: var(--text);
       line-height: 1.65;
+    }
+
+    nav {
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 12px 24px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .container {
@@ -41,62 +69,32 @@
       color: var(--accent);
     }
 
-    header .subtitle {
-      font-weight: 600;
-      margin-top: 10px;
-    }
-
-    header .contact {
-      font-size: 14px;
-      color: var(--muted);
-      margin-top: 8px;
-    }
-
-    header a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    header a:hover {
-      text-decoration: underline;
+    header p {
+      margin: 4px 0;
     }
 
     section {
-      margin-top: 40px;
+      margin-top: 60px;
     }
 
     section h2 {
-      font-size: 22px;
-      color: var(--accent);
+      font-size: 24px;
       margin-bottom: 6px;
+      color: var(--accent);
     }
 
     section hr {
       border: none;
-      border-top: 1px solid #ddd;
+      border-top: 1px solid #ccc;
       margin: 8px 0 20px 0;
     }
 
     .entry {
-      margin-bottom: 22px;
-    }
-
-    .entry-title {
-      font-weight: 600;
-    }
-
-    .entry-meta {
-      float: right;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .clear {
-      clear: both;
+      margin-bottom: 20px;
     }
 
     footer {
-      margin-top: 50px;
+      margin-top: 60px;
       text-align: center;
       font-size: 13px;
       color: #777;
@@ -105,124 +103,111 @@
 </head>
 
 <body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li>About Me</a></li>
+      <li>Research Experience</a></li>
+      <li>Projects</a></li>
+      <li>Recommendation Letters</a></li>
+      <li>Resume</a></li>
+      <li>Contact</a></li>
+    </ul>
+  </nav>
+
   <div class="container">
 
-    <!-- HEADER -->
+    <!-- Header -->
     <header>
       <h1>Adilet Shynggys</h1>
-      <p class="subtitle">
-        Prospective PhD Student — Mechanical Engineering
-      </p>
-      <p class="subtitle">
-        Energy Systems · Power Plant Design · Nuclear & Sustainable Energy
-      </p>
-      <div class="contact">
-        Astana, Kazakhstan ·
-        <a href="mailto:shyngysadilet81@gmail.com">
-          shyngysadilet81@gmail.com
-        </a> ·
-        <a href="https://www.linkedin.com/in/adilet-shynggys-229224251/" target="_blank">
-          LinkedIn
-        </a>
-      </div>
+      <p><strong>Prospective PhD Student — Mechanical Engineering</strong></p>
+      <p>Energy Systems · Power Plant Design · Nuclear & Sustainable Energy</p>
     </header>
 
-    <!-- RESEARCH PROFILE -->
-    <section>
-      <h2>Research Profile</h2>
+    <!-- About -->
+    <section id="about">
+      <h2>About Me</h2>
       <hr>
       <p>
-        Bachelor’s student in Mechanical and Aerospace Engineering with strong academic performance
-        and international research exposure. Research interests focus on energy systems, power plant
-        engineering, and nuclear and sustainable energy. Experienced in academic research,
-        interdisciplinary design collaboration, and industry engineering practice.
+        I am a Bachelor’s student in Mechanical and Aerospace Engineering with strong academic
+        performance and international research exposure. My interests lie in energy systems,
+        power plant engineering, and nuclear and sustainable energy. I am currently preparing
+        for PhD applications and actively engaged in academic research and interdisciplinary
+        engineering collaboration.
       </p>
     </section>
 
-    <!-- EDUCATION -->
-    <section>
-      <h2>Education</h2>
-      <hr>
-
-      <div class="entry">
-        <span class="entry-title">Nazarbayev University, Astana, Kazakhstan</span>
-        <span class="entry-meta">Aug 2023 – Jun 2027</span>
-        <div class="clear"></div>
-        Bachelor of Science in Mechanical & Aerospace Engineering<br>
-        GPA: 3.86 / 4.00 (top student in cohort)<br>
-        Exchange Program: The University of Hong Kong (HKU)
-      </div>
-    </section>
-
-    <!-- RESEARCH -->
-    <section>
+    <!-- Research -->
+    <section id="research">
       <h2>Research Experience</h2>
       <hr>
-
       <div class="entry">
-        <span class="entry-title">Research Assistant — Nazarbayev University</span>
-        <span class="entry-meta">2025</span>
-        <div class="clear"></div>
-        Conducted experimental and analytical research on triboelectric nanogenerators (TENGs),
-        optimizing device performance using process-engineering principles and improving energy
-        harvesting efficiency by 15–20%. Presented results at international conferences and received
-        the Best Research Poster Presentation award.
+        <strong>Research Assistant — Nazarbayev University</strong><br>
+        Research on triboelectric nanogenerators (TENGs), improving energy harvesting efficiency
+        by 15–20%. Best Research Poster Presentation, Belt and Road Initiative Conference.
       </div>
 
       <div class="entry">
-        <span class="entry-title">Power and Energy Systems Research (Planned)</span>
-        <div class="clear"></div>
-        Planned research on nuclear power plant design under Prof. Amgad Salama, focusing on
-        thermal–hydraulic analysis and sustainable power generation.
+        <strong>Planned Research: Nuclear Power Plant Design</strong><br>
+        Upcoming research under Prof. Amgad Salama focusing on nuclear systems and thermal–hydraulics.
       </div>
 
       <div class="entry">
-        <span class="entry-title">Engineering Design Collaboration — UC Berkeley</span>
-        <div class="clear"></div>
-        Ongoing interdisciplinary collaboration with Prof. Kazerooni on mechanical system design.
+        <strong>Design Collaboration — UC Berkeley</strong><br>
+        Ongoing collaboration with Prof. Kazerooni on mechanical system design.
       </div>
     </section>
 
-    <!-- INDUSTRY -->
-    <section>
-      <h2>Industry Experience</h2>
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
       <hr>
-
       <div class="entry">
-        <span class="entry-title">Product Support Engineering Intern — Wabtec Corporation</span>
-        <span class="entry-meta">Summer 2025</span>
-        <div class="clear"></div>
-        Applied process-engineering methodologies to optimize manufacturing workflows, contributing
-        to a 10% reduction in material waste. Supported Initial Quality Studies and conducted thermal
-        testing of electric motors during site visits.
+        Winner, Mechaton Engineering Case Competition (2025). Engineering design and analysis project.
+      </div>
+      <div class="entry">
+        Industry-focused engineering optimization projects at Wabtec Corporation.
       </div>
     </section>
 
-    <!-- HONORS -->
-    <section>
-      <h2>Honors & Awards</h2>
+    <!-- Recommendations -->
+    <section id="recommendations">
+      <h2>Recommendation Letters</h2>
       <hr>
-      Winner, Mechaton Engineering Case Competition (2025)<br>
-      Presidential Stipend, Nazarbayev University<br>
-      Yessenov Foundation Scholarship<br>
-      Mereke Foundation Scholarship<br>
-      Dean’s List (four semesters)
+      <p>
+        Strong academic recommendation letters are available from:
+      </p>
+      <ul>
+        <li>Senior Lecturer Yan Wei — The University of Hong Kong</li>
+        <li>Prof. Kazerooni — University of California, Berkeley</li>
+      </ul>
     </section>
 
-    <!-- SKILLS -->
-    <section>
-      <h2>Technical Skills</h2>
+    <!-- Resume -->
+    <section id="cv">
+      <h2>Resume</h2>
       <hr>
-      Engineering & Manufacturing: 3D printing, electrospinning, micro-printing, silicon printing<br>
-      Computation: MATLAB, Python, SolidWorks, OriginPro, Wolfram<br>
-      Languages: English, Russian, Kazakh
+      <p>
+        Download my CV (PDF):  
+        <strong>Link will be added</strong>
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <hr>
+      <p>
+        Email: shyngysadilet81@gmail.com<br>
+        LinkedIn: linkedin.com/in/adilet-shynggys-229224251
+      </p>
     </section>
 
     <footer>
       © 2026 Adilet Shynggys · Academic Portfolio
     </footer>
-
   </div>
+
 </body>
 </html>
-``
