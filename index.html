@@ -13,62 +13,50 @@
       --muted: #555;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       font-family: "Inter", "Segoe UI", Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.65;
     }
 
-    /* Navigation */
     nav {
-      background: #ffffff;
+      background: white;
       border-bottom: 1px solid #ddd;
-      position: sticky;
-      top: 0;
-      z-index: 10;
     }
 
     nav ul {
-      margin: 0;
-      padding: 14px 24px;
       list-style: none;
       display: flex;
       justify-content: center;
+      gap: 24px;
+      padding: 14px;
+      margin: 0;
       flex-wrap: wrap;
-      gap: 20px;
     }
 
-    nav a {
-      text-decoration: none;
-      color: var(--accent);
+    nav li {
+      cursor: pointer;
       font-weight: 600;
-      font-size: 14px;
+      color: var(--accent);
     }
 
-    nav a:hover {
+    nav li:hover {
       text-decoration: underline;
     }
 
-    /* Main container */
     .container {
       max-width: 900px;
       margin: 40px auto;
-      background: #ffffff;
+      background: white;
       padding: 48px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
       border-radius: 6px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     }
 
-    /* Header */
     header {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
 
     header h1 {
@@ -81,197 +69,142 @@
       margin: 6px 0;
     }
 
-    .contact {
-      font-size: 14px;
-      color: var(--muted);
-      margin-top: 10px;
+    .tab-section {
+      display: none;
     }
 
-    .contact a {
+    .tab-section.active {
+      display: block;
+    }
+
+    h2 {
       color: var(--accent);
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    /* Sections */
-    section {
-      margin-top: 70px;
-    }
-
-    section h2 {
-      font-size: 24px;
       margin-bottom: 6px;
-      color: var(--accent);
     }
 
-    section hr {
+    hr {
       border: none;
       border-top: 1px solid #ccc;
-      margin: 8px 0 22px 0;
-    }
-
-    .entry {
-      margin-bottom: 22px;
-    }
-
-    footer {
-      margin-top: 70px;
-      text-align: center;
-      font-size: 13px;
-      color: #777;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 
 <body>
 
-<!-- Navigation -->
-<nav>
-  <ul>
-    <li><a href="#about">About Me</a></li>
-    <li><a href="#research">Research Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#honors">Honors & Awards</a></li>
-    <li><a href="#recommendations">Recommendation Letters</a></li>
-    <li><a href="#cv">Resume</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<div class="container">
-
-  <!-- Header -->
-  <header>
-    <h1>Adilet Shynggys</h1>
-    <p><strong>Prospective PhD Student — Mechanical Engineering</strong></p>
-    <p>Energy Systems · Power Plant Design · Nuclear & Sustainable Energy</p>
-    <div class="contact">
-      Astana, Kazakhstan ·
-      <a href="mailto:shyngysadilet81@gmail.com">shyngysadilet81@gmail.com</a> ·
-      <a href="https://www.linkedin.com/in/adilet-shynggys-229224251/" target="_blank">LinkedIn</a>
-    </div>
-  </header>
-
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <hr>
-    <p>
-      I am a Bachelor’s student in Mechanical and Aerospace Engineering with strong academic
-      performance and international research exposure. My academic interests focus on energy
-      systems, power plant engineering, and nuclear and sustainable energy. I am currently
-      preparing for PhD applications and actively engaged in research, engineering design,
-      and interdisciplinary collaboration.
-    </p>
-  </section>
-
-  <!-- Research -->
-  <section id="research">
-    <h2>Research Experience</h2>
-    <hr>
-
-    <div class="entry">
-      <strong>Research Assistant — Nazarbayev University</strong><br>
-      Conducted experimental and analytical research on triboelectric nanogenerators (TENGs),
-      improving energy harvesting efficiency by 15–20%. Presented results at international
-      conferences and received the Best Research Poster Presentation award at the
-      Belt and Road Initiative Conference.
-    </div>
-
-    <div class="entry">
-      <strong>Planned Research: Nuclear Power Plant Design</strong><br>
-      Upcoming research under Prof. Amgad Salama focusing on nuclear systems,
-      thermal–hydraulic analysis, and sustainable power generation.
-    </div>
-
-    <div class="entry">
-      <strong>Engineering Design Collaboration — UC Berkeley</strong><br>
-      Ongoing interdisciplinary collaboration with Prof. Kazerooni on mechanical
-      system design and applied engineering analysis.
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <hr>
-
-    <div class="entry">
-      <strong>Mechaton Engineering Case Competition (Winner, 2025)</strong><br>
-      Engineering design and analysis project focused on system‑level optimization.
-    </div>
-
-    <div class="entry">
-      <strong>Industrial Engineering Projects — Wabtec Corporation</strong><br>
-      Applied process engineering techniques to manufacturing optimization and
-      performance evaluation.
-    </div>
-  </section>
-
-  <!-- Honors -->
-  <section id="honors">
-    <h2>Honors & Awards</h2>
-    <hr>
-
-    <div class="entry">
-      Winner — Mechaton Engineering Case Competition (2025)
-    </div>
-    <div class="entry">
-      Presidential Stipend — Nazarbayev University
-    </div>
-    <div class="entry">
-      Yessenov Foundation Scholarship
-    </div>
-    <div class="entry">
-      Mereke Foundation Scholarship
-    </div>
-    <div class="entry">
-      Dean’s List (four consecutive semesters)
-    </div>
-  </section>
-
-  <!-- Recommendations -->
-  <section id="recommendations">
-    <h2>Recommendation Letters</h2>
-    <hr>
-    <p>
-      Strong academic recommendation letters are available from:
-    </p>
+  <!-- Navigation -->
+  <nav>
     <ul>
-      <li>Senior Lecturer Yan Wei — The University of Hong Kong</li>
-      <li>Professor Kazerooni — University of California, Berkeley</li>
+      <li onclick="showTab('about')">About Me</li>
+      <li onclick="showTab('research')">Research Experience</li>
+      <li onclick="showTab('projects')">Projects</li>
+      <li onclick="showTab('honors')">Honors & Awards</li>
+      <li onclick="showTab('recommendations')">Recommendation Letters</li>
+      <li onclick="showTab('resume')">Resume</li>
+      <li onclick="showTab('contact')">Contact</li>
     </ul>
-  </section>
+  </nav>
 
-  <!-- CV -->
-  <section id="cv">
-    <h2>Resume</h2>
-    <hr>
-    <p>
-      A detailed academic CV (PDF) is available upon request.
-      <br>
-      (CV download link can be added here.)
-    </p>
-  </section>
+  <div class="container">
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <hr>
-    <p>
-      Email: <a href="mailto:shyngysadilet81@gmail.com">shyngysadilet81@gmail.com</a><br>
-      LinkedIn: <a href="https://www.linkedin.com/in/adilet-shynggys-229224251/" target="_blank">
-      linkedin.com/in/adilet-shynggys-229224251</a>
-    </p>
-  </section>
+    <!-- Header -->
+    <header>
+      <h1>Adilet Shynggys</h1>
+      <p><strong>Prospective PhD Student — Mechanical Engineering</strong></p>
+      <p>Energy Systems · Power Plant Design · Nuclear & Sustainable Energy</p>
+    </header>
 
-  <footer>
-    © 2026 Adilet Shynggys · Academic Portfolio
-  </footer>
+    <!-- About -->
+    <div id="about" class="tab-section active">
+      <h2>About Me</h2>
+      <hr>
+      <p>
+        I am a Bachelor’s student in Mechanical and Aerospace Engineering with strong academic
+        performance and international research exposure. My academic interests include energy
+        systems, power plant engineering, and nuclear and sustainable energy.
+      </p>
+    </div>
 
-</div>
+    <!-- Research -->
+    <div id="research" class="tab-section">
+      <h2>Research Experience</h2>
+      <hr>
+      <p>
+        <strong>Research Assistant — Nazarbayev University:</strong>
+        Research on triboelectric nanogenerators (TENGs), achieving 15–20% improvement in energy
+        harvesting efficiency. Best Research Poster Presentation award.
+      </p>
+      <p>
+        <strong>Planned Research:</strong> Nuclear power plant design under Prof. Amgad Salama.
+      </p>
+      <p>
+        <strong>Collaboration:</strong> Engineering design collaboration with Prof. Kazerooni (UC Berkeley).
+      </p>
+    </div>
+
+    <!-- Projects -->
+    <div id="projects" class="tab-section">
+      <h2>Projects</h2>
+      <hr>
+      <p>
+        Winner, Mechaton Engineering Case Competition (2025). Engineering system design and analysis.
+      </p>
+      <p>
+        Industry-focused optimization projects at Wabtec Corporation.
+      </p>
+    </div>
+
+    <!-- Honors -->
+    <div id="honors" class="tab-section">
+      <h2>Honors & Awards</h2>
+      <hr>
+      <p>Winner — Mechaton Engineering Case Competition (2025)</p>
+      <p>Presidential Stipend — Nazarbayev University</p>
+      <p>Yessenov Foundation Scholarship</p>
+      <p>Mereke Foundation Scholarship</p>
+      <p>Dean’s List (four semesters)</p>
+    </div>
+
+    <!-- Recommendations -->
+    <div id="recommendations" class="tab-section">
+      <h2>Recommendation Letters</h2>
+      <hr>
+      <p>
+        Strong academic recommendation letters are available from:
+      </p>
+      <ul>
+        <li>Senior Lecturer Yan Wei — University of Hong Kong</li>
+        <li>Prof. Kazerooni — University of California, Berkeley</li>
+      </ul>
+    </div>
+
+    <!-- Resume -->
+    <div id="resume" class="tab-section">
+      <h2>Resume</h2>
+      <hr>
+      <p>
+        CV (PDF) — link will be added here.
+      </p>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" class="tab-section">
+      <h2>Contact</h2>
+      <hr>
+      <p>Email: shyngysadilet81@gmail.com</p>
+      <p>LinkedIn: linkedin.com/in/adilet-shynggys-229224251</p>
+    </div>
+
+  </div>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab-section').forEach(sec => {
+        sec.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
 </body>
 </html>
