@@ -53,9 +53,13 @@
     .pub-list li:last-child { border-bottom: none; }
     .pub-tag { display: inline-block; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;
       color: var(--bg); background: var(--accent); padding: 3px 10px; border-radius: 20px; margin-left: 10px; vertical-align: middle; }
+    .ref-list { list-style: none; }
+    .ref-list li { padding: 16px 0; border-bottom: 1px solid rgba(200,150,62,0.15); }
+    .ref-list li:last-child { border-bottom: none; }
+    .ref-list .ref-role { color: var(--text-dim); font-size: 0.98rem; display: block; margin-top: 2px; }
     @media (max-width: 920px) {
-      .sidebar { transform: translateX(-100%); transition: 0.4s; }
-      .sidebar.open { transform: translateX(0); }
+      .sidebar { transform: translateX(-100%); visibility: hidden; transition: transform 0.4s, visibility 0.4s; }
+      .sidebar.open { transform: translateX(0); visibility: visible; }
       .main { margin-left: 0; padding: 40px 24px; }
       .research-grid { grid-template-columns: 1fr; }
       h1 { font-size: 2.6rem; }
@@ -66,7 +70,7 @@
         justify-content: center; font-size: 1.4rem; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
     }
     @media (prefers-reduced-motion: reduce) {
-      * { transition: none !important; animation: none !important; }
+      * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
       .card:hover, .stat-card:hover, .btn:hover, .nav-link:hover { transform: none; }
     }
   </style>
@@ -77,7 +81,7 @@
   <i class="fas fa-bars"></i>
 </button>
 
-<nav class="sidebar" id="sidebar">
+<nav class="sidebar" id="sidebar" aria-label="Main">
   <div class="monogram">AS</div>
   <p style="color:#c8963e; margin:8px 0 40px; font-size:14.5px;">Heat Transfer | Boiling | Nuclear Energy</p>
 
@@ -91,6 +95,7 @@
   <a href="#industry" class="nav-link"><i class="fas fa-briefcase"></i> Industry</a>
   <a href="#awards" class="nav-link"><i class="fas fa-award"></i> Awards</a>
   <a href="#skills" class="nav-link"><i class="fas fa-tools"></i> Skills</a>
+  <a href="#references" class="nav-link"><i class="fas fa-user-graduate"></i> References</a>
   <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
 
   <div style="margin-top: auto; padding-top: 40px;">
@@ -231,7 +236,7 @@
       <div>
         <h3>Triboelectric Nanogenerators for Wearable Sensing</h3>
         <p style="color:var(--accent);">Jan – Dec 2025 • Energy Conversion Laboratory, Nazarbayev University • Supervisor: Dr. Shabnam Yavari</p>
-        <p>Our group fabricated triboelectric nanogenerators for self-powered wearable sensing by electrospinning and silicone casting, varying surface morphology and material pairing to raise measured output power density by <strong>15–20%</strong>. I ran the performance characterization by hand across humidity levels and cyclic durability testing, and built the electrical characterization workflow behind it: load sweeps, data acquisition, and processing of the datasets in OriginPro and MATLAB. The results contributed to a co-authored article in <em>Small</em> and my first-author poster, which won Best Research Poster.</p>
+        <p>Worked closely with <strong>Dr. Shabnam Yavari</strong>, who supervised the project day to day and co-authored both the <em>Small</em> article and the award-winning poster with me. Our group fabricated triboelectric nanogenerators for self-powered wearable sensing by electrospinning and silicone casting, varying surface morphology and material pairing to raise measured output power density by <strong>15–20%</strong>. I ran the performance characterization by hand across humidity levels and cyclic durability testing, and built the electrical characterization workflow behind it: load sweeps, data acquisition, and processing of the datasets in OriginPro and MATLAB. The results contributed to a co-authored article in <em>Small</em> and my first-author poster, presented with Dr. Yavari at the Belt &amp; Road Initiative Conference, where it won Best Research Poster.</p>
       </div>
     </div>
   </section>
@@ -257,11 +262,11 @@
   <section id="leadership">
     <h2 class="sec-title">Teaching, Leadership &amp; Service</h2>
     <div class="card icon-card">
-      <i class="fas fa-chalkboard-teacher"></i>
+      <i class="fas fa-landmark"></i>
       <div>
-        <h3>Physics Tutor (volunteer)</h3>
-        <p style="color:var(--accent);">Nazarbayev University • 2023 – 2024</p>
-        <p>Tutored 20+ first-year students in introductory physics.</p>
+        <h3>Student Advisory Body, School of Engineering</h3>
+        <p style="color:var(--accent);">Nazarbayev University • Elected undergraduate representative • 2026 – Present</p>
+        <p>One of two students elected for the major, one undergraduate and one graduate, carrying student concerns and recommendations directly to the Dean and Vice Dean.</p>
       </div>
     </div>
     <div class="card icon-card">
@@ -270,6 +275,14 @@
         <h3>Cohort Representative, Mechanical &amp; Aerospace Engineering</h3>
         <p style="color:var(--accent);">Nazarbayev University • 2024 – 2026</p>
         <p>Ran more than ten exam-preparation nights for the cohort, and raised student requests with the dean, leading to a rescheduled exam and more exchange opportunities.</p>
+      </div>
+    </div>
+    <div class="card icon-card">
+      <i class="fas fa-chalkboard-teacher"></i>
+      <div>
+        <h3>Physics Tutor (volunteer)</h3>
+        <p style="color:var(--accent);">Nazarbayev University • 2023 – 2024</p>
+        <p>Tutored 20+ first-year students in introductory physics.</p>
       </div>
     </div>
     <div class="card icon-card">
@@ -393,6 +406,31 @@
     </div>
   </section>
 
+  <section id="references">
+    <h2 class="sec-title">References</h2>
+    <div class="card">
+      <ul class="ref-list">
+        <li>
+          <strong>Prof. Amgad Salama</strong> — Nazarbayev University
+          <span class="ref-role">Research advisor (capillary-driven surface engineering) and senior capstone advisor; also taught my engineering thermodynamics course.</span>
+        </li>
+        <li>
+          <strong>Dr. Shabnam Yavari</strong> — Energy Conversion Laboratory, Nazarbayev University
+          <span class="ref-role">Supervised my triboelectric nanogenerator research day to day for a year; co-author on the <em>Small</em> article and on the Best Research Poster, which we presented together at the Belt &amp; Road Initiative Conference.</span>
+        </li>
+        <li>
+          <strong>Prof. Wei Yan</strong> — The University of Hong Kong
+          <span class="ref-role">Supervised my transmission design project and collaborated with me on undergraduate curriculum design during my exchange.</span>
+        </li>
+        <li>
+          <strong>Prof. Homayoon Kazerooni</strong> — UC Berkeley / The University of Hong Kong
+          <span class="ref-role">Worked together on a 3D-printed interactive art installation at HKU.</span>
+        </li>
+      </ul>
+      <p style="margin-top:16px; color:var(--text-dim); font-size:0.95rem;">Contact information available upon request.</p>
+    </div>
+  </section>
+
   <section id="contact">
     <h2 class="sec-title">Contact</h2>
     <p style="font-size:1.25rem; max-width:720px;">
@@ -410,20 +448,26 @@
 <script>
   const mobileToggle = document.getElementById('mobile-toggle');
   const sidebar = document.getElementById('sidebar');
+  const navLinks = document.querySelectorAll('.nav-link');
 
-  document.querySelectorAll('.nav-link').forEach(link => {
+  function setActive(hash) {
+    navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === hash));
+  }
+
+  navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
-      if (targetId.startsWith('#')) {
-        e.preventDefault();
-        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-        if (sidebar) {
-          sidebar.classList.remove('open');
-          if (mobileToggle) mobileToggle.setAttribute('aria-expanded', 'false');
-        }
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) targetElement.scrollIntoView({ behavior: 'smooth' });
+      if (!targetId.startsWith('#')) return;
+      e.preventDefault();
+      setActive(targetId);
+      if (sidebar) {
+        sidebar.classList.remove('open');
+        if (mobileToggle) mobileToggle.setAttribute('aria-expanded', 'false');
+      }
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+        history.replaceState(null, '', targetId);
       }
     });
   });
@@ -435,19 +479,31 @@
     });
   }
 
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && sidebar && sidebar.classList.contains('open')) {
+      sidebar.classList.remove('open');
+      if (mobileToggle) {
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileToggle.focus();
+      }
+    }
+  });
+
   const sections = document.querySelectorAll('main section');
-  const navLinks = document.querySelectorAll('.nav-link');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        navLinks.forEach(link => {
-          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-        });
-      }
+      if (entry.isIntersecting) setActive('#' + entry.target.getAttribute('id'));
     });
   }, { root: null, rootMargin: '-20% 0px -60% 0px', threshold: 0 });
   sections.forEach(section => observer.observe(section));
+
+  // Short sections at the bottom never reach the observer band, so pin the last one at page end.
+  const lastSection = sections[sections.length - 1];
+  window.addEventListener('scroll', () => {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 4 && lastSection) {
+      setActive('#' + lastSection.getAttribute('id'));
+    }
+  }, { passive: true });
 </script>
 </body>
 </html>
